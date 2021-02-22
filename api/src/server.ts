@@ -12,7 +12,7 @@ const app = express();
 
  //http://localhost:3333/users
 app.get("/", (request, response) => {
-    return response.json({message: "Hello, World"})
+    return response.json({message: "Hello, World" })
 });
 
 // 1 param => Rota(Recurso API)
