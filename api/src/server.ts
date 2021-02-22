@@ -19,6 +19,7 @@ app.get("/", (request, response) => {
 // 1 param => Rota(Recurso API)
 // 2 param => (request, response)
 
+
 app.post("/", (request, response) => {
     // Recebeu dados para salvar
     return response.json({message: "Dados salvos com sucesso"})
