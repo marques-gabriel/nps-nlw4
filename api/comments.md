@@ -21,4 +21,6 @@
  * Histórico de alteração do BD
  * Estrutura BD
  * Criar: yarn typeorm migration:create -n CreateUsers
+ * Rodar: yarn typeorm migration:run
+ * Desfazer a ultima: yarn typeorm migration:revert
 
