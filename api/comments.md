@@ -16,6 +16,8 @@
  * Query Builder (knexjs)
  * ORM (typeorm (trabalha bem com TS, genérico), sequelize etc) - Mapeamento entre objetos. Mapear classe para uma tabela específica no BD
 
+- beekeeper
+
 # Migration:
  * Alterações do BD na aplicação
  * Histórico de alteração do BD
@@ -24,14 +26,11 @@
  * Rodar: yarn typeorm migration:run
  * Desfazer a ultima: yarn typeorm migration:revert
 
-
-
-
-
-
-
-
-
+# Repository
+- Entity manager
+- Realizar ações e manipulações de dados dentro do BD
+- Comunicação com BD
+- Específico para cada entidade
 
 # Server
 
