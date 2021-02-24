@@ -52,4 +52,27 @@ app.listen(3333, () => console.log("Server is running!"));
 
 ```
 
-# 
+# Testes Automatizados
+1. **Testes unitários** (testar determinada funcionalidade da aplicação):
+1. TDD - Desenvolver o código orientado a testes
+
+2. **Testes de integração** (testar funcionalidade completa da aplicação)
+ex.: REQUEST => routes > controller > repository v
+        <= RESPONSE  < controller < repository <
+
+3. **Teste ponta a ponta(E2E)** (testar toda ação do usuário na aplicação - principalmente front end)
+
+```
+// JEST (First.test.ts)
+
+describe("First", () => {
+    it("deve ser possivel somar 2 numeros", () => {
+        expect(2 + 2).toBe(4)
+    })
+
+    it("deve ser possivel somar 2 numeros", () => {
+        expect(2 + 2).not.toBe(5)
+    })
+})
+
+```
