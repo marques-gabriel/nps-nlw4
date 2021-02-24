@@ -8,11 +8,11 @@ class UserController {
         const { name, email } = request.body
 
         // criar repositório de usuário para ter acesso a métodos no typeorm
-        // const useraRepository = getRepository(User)
-        const useraRepository = getCustomRepository(UsersRepository)
+        // const userRepository = getRepository(User)
+        const usersRepository = getCustomRepository(UsersRepository)
 
         // SELECT * FROM USERS WHERE EMAIL = "EMAIL"
-        const userAlreadyExists = await useraRepository.findOne({
+        const userAlreadyExists = await usersRepository.findOne({
             email
         })
 
@@ -22,13 +22,13 @@ class UserController {
             })
         }
 
-        const user = useraRepository.create({
+        const user = usersRepository.create({
                 name, email
         })
 
-        await useraRepository.save(user) 
+        await usersRepository.save(user) 
         
-        return response.json(user)
+        return response.status(201).json(user)
     }
 }
 
