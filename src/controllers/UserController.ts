@@ -1,6 +1,6 @@
 import { Request, Response } from "express"
-import { getRepository } from "typeorm"
-import { User } from "../models/User"
+import { getCustomRepository } from "typeorm"
+import { UsersRepository } from "../repositories/UsersRepository"
 
 class UserController {
 
@@ -8,7 +8,8 @@ class UserController {
         const { name, email } = request.body
 
         // criar repositório de usuário para ter acesso a métodos no typeorm
-        const useraRepository = getRepository(User)
+        // const useraRepository = getRepository(User)
+        const useraRepository = getCustomRepository(UsersRepository)
 
         // SELECT * FROM USERS WHERE EMAIL = "EMAIL"
         const userAlreadyExists = await useraRepository.findOne({
