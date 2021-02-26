@@ -76,3 +76,8 @@ describe("First", () => {
 })
 
 ```
+
+# Params
+1. Body params (parametros dentro do corpo da requisecao)
+2. Route Params => Parametros na rota routes.get("/recurso/:value")
+3. Query params  => Parametros nao obrigatorios ex.: busca, paginacao (?chave=valor)
