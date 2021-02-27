@@ -4,13 +4,18 @@ import "express-async-errors"
 import  createConnection from "./database"
 import { router } from "./routes"
 import { AppError } from './errors/AppError'
-
+import handlebars from 'express-handlebars'
 
 createConnection()
 const app = express()
 
 app.use(express.json())
+app.use(express.urlencoded({extended: true}))
+
 app.use(router)
+
+app.engine('handlebars', handlebars({defaultLayout: null}))
+app.set('view engine', 'handlebars')
 
 app.use((err: Error, request: Request, response: Response, _next: NextFunction) => {
     if(err instanceof AppError) {

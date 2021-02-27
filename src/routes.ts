@@ -18,6 +18,7 @@ router.post("/users", userController.create)
 router.post("/surveys", surveyController.create)
 router.get("/surveys", surveyController.show)
 
+router.get("/", sendMailController.panel)
 router.post("/sendmail", sendMailController.execute)
 
 router.get("/answers/:value", answerController.execute )

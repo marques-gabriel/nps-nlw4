@@ -6,6 +6,8 @@ import { SurveysUsersRepository } from "../repositories/SurveysUsersRepository";
 import { UsersRepository } from "../repositories/UsersRepository";
 import SendMailService from "../services/SendMailService";
 import { AppError } from "../errors/AppError";
+import handlebars from 'handlebars'
+import fs from 'fs'
 
 class SendMailController  {
 
@@ -75,6 +77,20 @@ class SendMailController  {
         return response.json(surveyUser)
     
     }
+
+    async panel(request: Request, response: Response) {
+
+        const usersRepository = getCustomRepository(UsersRepository)
+        const surveysRepository = getCustomRepository(SurveysRepository)
+
+        const users = await usersRepository.find()
+        const surveys = await surveysRepository.find()
+
+        const panelPath = resolve(__dirname, "..", "views", "panel.handlebars")
+
+        response.render(panelPath, { users, surveys })
+    }
+
 }
 
 export { SendMailController }

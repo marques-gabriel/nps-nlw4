@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Controle</title>
+</head>
+<body>
+
+<section class="container">
+<h2>Painel de Controle</h2>
+<div class="send-survey">
+    <h3>Enviar Pesquisa de Satisfação</h3>
+    <form action="/sendmail" method="post">
+        <div class="select-options">
+            <p>Escolha o usuário e a pesquisa </p>
+            
+            <select name="email" class="select-user">
+                {{#each users}}
+                    <option value="{{this.email}}">
+                        {{this.name}}
+                    </option>
+                {{/each}}
+            </select>
+
+            <select name="survey_id" class="select-survey">
+                {{#each surveys}}
+                    <option value="{{this.id}}">
+                        {{this.title}}
+                    </option>
+                {{/each}}
+            </select>
+        </div>
+        <button class="buttons" type="submit">Enviar Pesquisa por email</button>
+    </form>
+</div>
+</section>
+    
+</body>
+</html>
