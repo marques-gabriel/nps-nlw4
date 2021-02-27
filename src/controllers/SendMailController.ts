@@ -88,7 +88,7 @@ class SendMailController  {
 
         const panelPath = resolve(__dirname, "..", "views", "panel.handlebars")
 
-        response.render(panelPath, { users, surveys })
+       return response.render(panelPath, { users, surveys })
     }
 
 }

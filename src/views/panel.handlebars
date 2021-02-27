@@ -9,32 +9,40 @@
 <body>
 
 <section class="container">
-<h2>Painel de Controle</h2>
-<div class="send-survey">
-    <h3>Enviar Pesquisa de Satisfação</h3>
-    <form action="/sendmail" method="post">
-        <div class="select-options">
-            <p>Escolha o usuário e a pesquisa </p>
-            
-            <select name="email" class="select-user">
-                {{#each users}}
-                    <option value="{{this.email}}">
-                        {{this.name}}
-                    </option>
-                {{/each}}
-            </select>
+    <h2>Painel de Controle</h2>
+    <div class="send-survey">
+        <h3>Enviar Pesquisa de Satisfação</h3>
+        <form action="/sendmail" method="post">
+            <div class="select-options">
+                <p>Escolha o usuário e a pesquisa </p>
+                
+                <select name="email" class="select-user">
+                    {{#each users}}
+                        <option value="{{this.email}}">
+                            {{this.name}}
+                        </option>
+                    {{/each}}
+                </select>
 
-            <select name="survey_id" class="select-survey">
-                {{#each surveys}}
-                    <option value="{{this.id}}">
-                        {{this.title}}
-                    </option>
-                {{/each}}
-            </select>
-        </div>
-        <button class="buttons" type="submit">Enviar Pesquisa por email</button>
-    </form>
-</div>
+                <select name="survey_id" class="select-survey">
+                    {{#each surveys}}
+                        <option value="{{this.id}}">
+                            {{this.title}}
+                        </option>
+                    {{/each}}
+                </select>
+            </div>
+            <button class="buttons" type="submit">Enviar Pesquisa por email</button>
+        </form>
+    </div>
+
+    <div class="nps-calc">
+        <h3>Pesquisas realizadas:</h3>
+        {{#each surveys}}
+            {{this.title}}
+            <a href="/nps/{{this.id}}">Visualizar NPS</a>
+        {{/each}}
+    </div>
 </section>
     
 </body>

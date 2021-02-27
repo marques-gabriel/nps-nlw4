@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{survey.title}}</title>
+</head>
+<body>
+
+<section class="container nps">
+    <h2>Resultados da pesquisa "{{survey.title}}"</h2>
+
+    <div class="results">
+        <h3>Detratores:</h3>
+            <p>{{detractor}}</p>
+        <h3>Promotores:</h3>
+            <p>{{promoters}}</p>
+        <h3>Passivos:</h3>
+            <p>{{passives}}</p>
+        <h3>Total de respostas:</h3>
+            <p>{{totalAnswers}}</p>
+        <h3>NPS:</h3>
+            <p>{{nps}}</p>
+    </div>   
+</section>
+    
+</body>
+</html>
