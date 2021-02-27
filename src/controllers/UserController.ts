@@ -3,11 +3,14 @@ import { getCustomRepository } from "typeorm"
 import { UsersRepository } from "../repositories/UsersRepository"
 import * as yup from "yup"
 import { AppError } from "../errors/AppError"
+import { resolve } from 'path'
 
 class UserController {
 
     async create(request: Request, response: Response) {
         const { name, email } = request.body
+
+        console.log(request.body)
 
         const schema = yup.object().shape({
             name: yup.string().required("Nome é obrigatório"),
@@ -55,6 +58,11 @@ class UserController {
         await usersRepository.save(user) 
         
         return response.status(201).json(user)
+    }
+
+    async form(request: Request, response: Response) {
+        const userPath = resolve(__dirname, "..", "views", "user.handlebars")
+        response.render(userPath)
     }
 }
 

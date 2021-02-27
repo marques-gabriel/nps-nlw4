@@ -14,15 +14,16 @@ const answerController = new AnswerController()
 const npsController = new NpsController()
 
 router.post("/users", userController.create)
+router.get("/users", userController.form)
 
 router.post("/surveys", surveyController.create)
-router.get("/surveys", surveyController.show)
+router.get("/surveys", surveyController.form)
+// router.get("/surveys", surveyController.show)
 
 router.get("/", sendMailController.panel)
 router.post("/sendmail", sendMailController.execute)
 
 router.get("/answers/:value", answerController.execute )
-
 router.get("/nps/:survey_id", npsController.execute)
 
 

@@ -1,6 +1,7 @@
 import { Request, Response } from "express"
 import { getCustomRepository } from "typeorm"
 import { SurveysRepository } from "../repositories/SurveysRepository"
+import { resolve } from 'path'
 
 class SurveyController {
     async create(request: Request, response: Response) {
@@ -16,6 +17,11 @@ class SurveyController {
         await surveysRepository.save(survey)
 
         return response.status(201).json(survey)
+    }
+
+    async form(request: Request, response: Response) {
+        const surveyPath = resolve(__dirname, "..", "views", "survey.handlebars")
+        response.render(surveyPath)
     }
 
     async show(request: Request, response: Response) {

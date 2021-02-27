@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo usuário</title>
+</head>
+<body>
+
+<section class="container survey">
+    <h2>Criar novo usuário</h2>
+    
+        <form action="/users" method="post">
+
+        <div>
+            <p>Informe o nome do usuário</p>
+            <input type="text" name="name" placeholder="Nome do usuário" required="required" >
+        </div>
+
+        <div>
+            <p>Informe o email do usuário</p>
+            <input type="email" name="email" placeholder="Email do usuário" required="required">
+        </div>
+            
+            <button class="buttons" type="submit">Criar usuário</button>
+        </form>
+    
+</section>
+    
+</body>
+</html>
