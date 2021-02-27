@@ -75,6 +75,10 @@ describe("First", () => {
     })
 })
 
+// remover database test
+"posttest": "rm ./src/database/database.test.sqlite"
+
+
 ```
 
 # Params
