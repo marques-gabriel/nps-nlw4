@@ -2,7 +2,7 @@
 
 <p align="center">
   <img alt="Preview" src="./public/preview.png" width="100%">
-  <img alt="email" src="./public/email.png" width="100%">
+  <img alt="email" src="./public/email.png" width="45%">
 </p>
 
 <br />
@@ -20,7 +20,7 @@
   <a href="#-sobre-o-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-como-executar-o-projeto">Como executar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-diagrama-e-painel">Diagrama e Painel</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-diagrama-e-painel">Diagrama e Painel</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 
 <br />
