@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Painel de Controle</title>
 </head>
 <body>
@@ -14,8 +15,8 @@
         <h3>Enviar Pesquisa de Satisfação</h3>
         <form action="/sendmail" method="post">
             <div class="select-options">
-                <p>Escolha o usuário e a pesquisa </p>
                 
+                Usuário:
                 <select name="email" class="select-user">
                     {{#each users}}
                         <option value="{{this.email}}">
@@ -23,7 +24,8 @@
                         </option>
                     {{/each}}
                 </select>
-
+                
+                Pesquisa:
                 <select name="survey_id" class="select-survey">
                     {{#each surveys}}
                         <option value="{{this.id}}">
@@ -32,7 +34,7 @@
                     {{/each}}
                 </select>
             </div>
-            <button class="buttons" type="submit">Enviar Pesquisa por email</button>
+            <button type="submit">Enviar Pesquisa por email</button>
         </form>
     </div>
 
@@ -43,10 +45,16 @@
 
     <div class="nps-calc">
         <h3>Pesquisas realizadas:</h3>
-        {{#each surveys}}
-            {{this.title}}
-            <a href="/nps/{{this.id}}">Visualizar NPS</a>
-        {{/each}}
+
+        <div class="surveys">
+            {{#each surveys}}
+                <div class="survey-nps">
+                     "{{this.title}}"
+                    <a href="/nps/{{this.id}}">Visualizar NPS</a>
+                </div>
+            {{/each}}
+        </div>
+        
     </div>
 </section>
     

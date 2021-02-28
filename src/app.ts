@@ -5,12 +5,15 @@ import  createConnection from "./database"
 import { router } from "./routes"
 import { AppError } from './errors/AppError'
 import handlebars from 'express-handlebars'
+import path from 'path'
+
 
 createConnection()
 const app = express()
 
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
+app.use(express.static('public'))
 
 app.use(router)
 

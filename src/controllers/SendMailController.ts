@@ -6,8 +6,6 @@ import { SurveysUsersRepository } from "../repositories/SurveysUsersRepository";
 import { UsersRepository } from "../repositories/UsersRepository";
 import SendMailService from "../services/SendMailService";
 import { AppError } from "../errors/AppError";
-import handlebars from 'handlebars'
-import fs from 'fs'
 
 class SendMailController  {
 
