@@ -5,8 +5,6 @@ import  createConnection from "./database"
 import { router } from "./routes"
 import { AppError } from './errors/AppError'
 import handlebars from 'express-handlebars'
-import path from 'path'
-
 
 createConnection()
 const app = express()

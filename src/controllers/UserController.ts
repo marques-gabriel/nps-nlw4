@@ -10,8 +10,6 @@ class UserController {
     async create(request: Request, response: Response) {
         const { name, email } = request.body
 
-        console.log(request.body)
-
         const schema = yup.object().shape({
             name: yup.string().required("Nome é obrigatório"),
             email: yup.string().email().required("Email incorreto")
