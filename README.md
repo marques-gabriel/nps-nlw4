@@ -71,8 +71,10 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 🔶 Diagrama e Painel
 
-<img src="./public/diagrama.png" alt="Diagrama da aplicação" />
-<img src="./public/panel.png" alt="Painel de controle" />
+<p align="center">
+  <img src="./public/diagrama.png" width="90%" alt="Diagrama da aplicação" />
+  <img src="./public/panel.png" width="60%" alt="Painel de controle" />
+</p>
 
 ***
 
