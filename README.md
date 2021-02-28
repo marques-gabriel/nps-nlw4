@@ -2,6 +2,7 @@
 
 <p align="center">
   <img alt="Preview" src="./public/preview.png" width="100%">
+  <img alt="email" src="./public/email.png" width="100%">
 </p>
 
 <br />
