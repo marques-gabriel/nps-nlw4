@@ -13,6 +13,7 @@ import { SurveysRepository } from "../repositories/SurveysRepository";
  * 
  * (Promotores - detratores) / (Respondentes) * 100
  */
+
 class NpsController {
     async execute(request: Request, response: Response) {
 
