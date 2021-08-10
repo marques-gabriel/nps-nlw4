@@ -1,4 +1,4 @@
-<h1 align="center">NPS-NLW</h1>
+<h1 align="center">NPS</h1>
 
 <p align="center">
   <img alt="Preview" src="./public/preview.png" width="100%">
@@ -27,7 +27,7 @@
 
 ## 💻 Sobre o projeto
 
-O NPS-NLW é uma aplicação que consiste em calcular o NPS da empresa. Nele fazemos o cadastro de usuários, cadastro de pesquisas, envio de e-mail para os usuários responderem as pesquisas de satisfação e com isso podemos realizar o cálculo do NPS.
+O NPS é uma aplicação que consiste em calcular o NPS da empresa. Nele fazemos o cadastro de usuários, cadastro de pesquisas, envio de e-mail para os usuários responderem as pesquisas de satisfação e com isso podemos realizar o cálculo do NPS.
 
 Esse projeto foi desenvolvido durante a trilha de NodeJS, na quarta edição da NLW, oferecida pela [Rocketseat](https://rocketseat.com.br/). Aprendemos conceitos sobre o que é um API, como iniciar um projeto utilizando Typescript e Express para gerenciamento das rotas, TypeORM para manipulação dos dados, testes automatizados e envio de e-mail. Foi adicionada uma interface de painel de controle para executar os cadastros, envio de email e o cálculo do NPS diretamente pelo browser.
 
